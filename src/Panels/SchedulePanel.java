@@ -35,8 +35,8 @@ public class SchedulePanel extends JPanel {
 	private JTextField MobileNo;
 	String vaccionchose;
 	private JTextField email;
-	private final ButtonGroup checkbox = new ButtonGroup();
 	String treatments;
+	private final ButtonGroup bg = new ButtonGroup();
 
 	/**
 	 * Create the panel.
@@ -102,84 +102,77 @@ public class SchedulePanel extends JPanel {
 		lblNewLabel_1_3.setBounds(135, 428, 132, 46);
 		panel_1.add(lblNewLabel_1_3);
 		
+		JRadioButton rdbtnNewRadioButton = new JRadioButton("CEMENT FILLING");
+		rdbtnNewRadioButton.setBackground(new Color(51, 0, 102));
+		rdbtnNewRadioButton.setForeground(new Color(240, 255, 255));
+		rdbtnNewRadioButton.setFont(new Font("Myanmar Text", Font.BOLD, 15));
+		bg.add(rdbtnNewRadioButton);
+		rdbtnNewRadioButton.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				treatments = "CEMENT FILLING";
+				
+			}
+		});
+
+		rdbtnNewRadioButton.setBounds(142, 306, 217, 35);
+		panel_1.add(rdbtnNewRadioButton);
+		
+		JRadioButton rdbtnNewRadioButton_1 = new JRadioButton("TEETH BNDINGS");
+		rdbtnNewRadioButton_1.setBackground(new Color(51, 0, 102));
+		rdbtnNewRadioButton_1.setForeground(new Color(240, 255, 255));
+		rdbtnNewRadioButton_1.setFont(new Font("Myanmar Text", Font.BOLD, 15));
+		bg.add(rdbtnNewRadioButton_1);
+		rdbtnNewRadioButton.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+			 treatments = "TEETH BNDINGS";
+				
+			}
+		});
+		rdbtnNewRadioButton_1.setBounds(399, 306, 217, 35);
+		panel_1.add(rdbtnNewRadioButton_1);
+		
+		JRadioButton rdbtnNewRadioButton_2 = new JRadioButton("TEETH WHITENING");
+		rdbtnNewRadioButton_2.setBackground(new Color(51, 0, 102));
+		rdbtnNewRadioButton_2.setForeground(new Color(240, 255, 255));
+		rdbtnNewRadioButton_2.setFont(new Font("Myanmar Text", Font.BOLD, 15));
+		bg.add(rdbtnNewRadioButton_2);
+		rdbtnNewRadioButton.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				treatments = "TEETH WHITENING";
+				
+			}
+		});
+		rdbtnNewRadioButton_2.setBounds(142, 365, 217, 35);
+		panel_1.add(rdbtnNewRadioButton_2);
+		
+		JRadioButton rdbtnNewRadioButton_3 = new JRadioButton("ROOT CANAL");
+		rdbtnNewRadioButton_3.setBackground(new Color(51, 0, 102));
+		rdbtnNewRadioButton_3.setForeground(new Color(240, 255, 255));
+		rdbtnNewRadioButton_3.setFont(new Font("Myanmar Text", Font.BOLD, 15));
+		bg.add(rdbtnNewRadioButton_3);
+		rdbtnNewRadioButton.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				treatments = "Root Canal Treatment";
+				
+			}
+		});
+		rdbtnNewRadioButton_3.setBounds(399, 365, 217, 35);
+		panel_1.add(rdbtnNewRadioButton_3);
+		
+		
 		JComboBox center = new JComboBox();
-		center.setModel(new DefaultComboBoxModel(new String[] {"", "Siddhivinayak Dental Clinic, Solapur", "Yash Dental Clinic, Solapur", "Sri Sai Dental Care, Solapur", "Dr.Katkar Dental Clinic, Solapur", "Bhalerao Dental Clinic, Solapur"}));
-		/*center.addItem("");
-		center.addItem("Siddhivinayak Dental Clinic, Solapur");
-		center.addItem("Yash Dental Clinic, Solapur");
-		center.addItem("Sri Sai Dental Care, Solapur");
-		center.addItem("Dr.Katkar Dental Clinic, Solapur");
-		center.addItem("Bhalerao Dental Clinic, Solapur");*/
+		center.addItem("");
+		center.addItem("City Dental Care, Solapur");
+		center.addItem("Ashwini Dental Clinic, Solapur");
+		center.addItem("Railway Dental Hospital, Solapur");
+		center.addItem("Yashodhara Dental Hospital, Solapur");
+		center.addItem("Ambika Hospital, Solapur");
 		center.setBounds(274, 441, 324, 29);
 		panel_1.add(center);
-		
-		JCheckBox chckbxNewCheckBox = new JCheckBox("CEMENT FILL");
-		chckbxNewCheckBox.addMouseListener(new MouseAdapter() {
-			
-			
-			@Override
-			public void mouseClicked(MouseEvent e) {
-				treatments = "CEMENT FILL";
-				
-			}
-		});
-		checkbox.add(chckbxNewCheckBox);
-		chckbxNewCheckBox.setForeground(new Color(0, 250, 154));
-		chckbxNewCheckBox.setBackground(new Color(51, 0, 102));
-		chckbxNewCheckBox.setFont(new Font("Century Gothic", Font.BOLD, 20));
-		chckbxNewCheckBox.setBounds(135, 306, 161, 35);
-		panel_1.add(chckbxNewCheckBox);
-		
-		JCheckBox chckbxTeethWhitening = new JCheckBox("TEETH WHITENING");
-		chckbxNewCheckBox.addMouseListener(new MouseAdapter() {
-			
-			
-			@Override
-			public void mouseClicked(MouseEvent e) {
-				treatments = "TEETH WHITENING";
-				
-			}
-		});
-		checkbox.add(chckbxTeethWhitening);
-		chckbxTeethWhitening.setForeground(new Color(0, 250, 154));
-		chckbxTeethWhitening.setFont(new Font("Century Gothic", Font.BOLD, 20));
-		chckbxTeethWhitening.setBackground(new Color(51, 0, 102));
-		chckbxTeethWhitening.setBounds(357, 303, 206, 35);
-		panel_1.add(chckbxTeethWhitening);
-		
-		JCheckBox chckbxTeethCleanings = new JCheckBox("TEETH CLEANINGS");
-		chckbxNewCheckBox.addMouseListener(new MouseAdapter() {
-			
-			
-			@Override
-			public void mouseClicked(MouseEvent e) {
-				treatments = "TEETH WHITENING";
-				
-			}
-		});
-		checkbox.add(chckbxTeethCleanings);
-		chckbxTeethCleanings.setForeground(new Color(0, 250, 154));
-		chckbxTeethCleanings.setFont(new Font("Century Gothic", Font.BOLD, 20));
-		chckbxTeethCleanings.setBackground(new Color(51, 0, 102));
-		chckbxTeethCleanings.setBounds(135, 353, 206, 35);
-		panel_1.add(chckbxTeethCleanings);
-		
-		JCheckBox chckbxTeethBondings = new JCheckBox("TEETH BONDINGS");
-		chckbxNewCheckBox.addMouseListener(new MouseAdapter() {
-			
-			
-			@Override
-			public void mouseClicked(MouseEvent e) {
-				treatments = "TEETH BONDINGS";
-				
-			}
-		});
-		checkbox.add(chckbxTeethBondings);
-		chckbxTeethBondings.setForeground(new Color(0, 250, 154));
-		chckbxTeethBondings.setFont(new Font("Century Gothic", Font.BOLD, 20));
-		chckbxTeethBondings.setBackground(new Color(51, 0, 102));
-		chckbxTeethBondings.setBounds(361, 353, 206, 35);
-		panel_1.add(chckbxTeethBondings);
 		
 		JButton btnNewButton = new JButton("Schedule Appoinment");
 		btnNewButton.addActionListener(new ActionListener() {
@@ -189,7 +182,7 @@ public class SchedulePanel extends JPanel {
 				String DATE = date.getDate().toString();
 				String Treatments=treatments;
 				//String Treatments = vaccionchose;
-				String TimeSlot=(String) center.getSelectedItem();
+				String TimeSlot= (String) center.getSelectedItem();
 				DatabaseOperations db = new DatabaseOperations();
 				db.appointment(Mobileno,DATE, Treatments, TimeSlot) ;
 				EmailNotification en = new EmailNotification();
@@ -215,7 +208,7 @@ public class SchedulePanel extends JPanel {
 		lblNewLabel_1_4.setFont(new Font("Dialog", Font.BOLD, 20));
 		lblNewLabel_1_4.setBounds(135, 85, 132, 46);
 		panel_1.add(lblNewLabel_1_4);
-		
+	
 		setVisible(true);
 	}
 }
